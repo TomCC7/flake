@@ -33,16 +33,24 @@ in {
     htop
     killall
     ranger
+    tmux
 
     # fonts
     nerdfonts
+    wqy_zenhei
+    wqy_microhei
+    material-design-icons
+    unifont
 
 
     # desktop
     rofi
-    polybar
+    polybarFull
     qutebrowser
     tdesktop
+    picom
+    xbps
+    mpd
 
     # build
     cmake

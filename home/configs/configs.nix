@@ -22,4 +22,16 @@
     userName = "C.C";
     userEmail = "cctom@umich.edu";
   };
+
+  xresources.properties = {
+    # "xft.dpi" = 196;
+  };
+
+  # services.polybar = {
+  #   enable = true;
+  #   package = pkgs.polybarFull;
+  #   script = ''
+  #     polybar top &
+  #   '';
+  # };
 }

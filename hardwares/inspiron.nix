@@ -23,13 +23,13 @@
   };
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/fd75d71c-23be-41a8-8ede-b0ee552e2be4";
+    { device = "/dev/mapper/enc";
       fsType = "btrfs";
       options = [ "subvol=nixos" "compress=zstd" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/fd75d71c-23be-41a8-8ede-b0ee552e2be4";
+    { device = "/dev/mapper/enc";
       fsType = "btrfs";
       options = [ "subvol=home" "compress=zstd" ];
     };
