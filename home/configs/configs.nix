@@ -18,7 +18,7 @@
 
   programs.git = {
     package = pkgs.gitAndTools.gitFull;
-    enalbe = true;
+    enable = true;
     userName = "C.C";
     userEmail = "cctom@umich.edu";
   };

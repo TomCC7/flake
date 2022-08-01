@@ -12,18 +12,34 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.loader = {
+    systemd-boot.enable = true;
+    grub.device = "/dev/disk/by-uuid/EA4A-D611";
+  };
+
+  boot.initrd.luks.devices."enc" = {
+    device = "/dev/disk/by-uuid/fd75d71c-23be-41a8-8ede-b0ee552e2be4";
+    preLVM = true;
+  };
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/d37ddae0-91dd-4c17-8887-c5a043ce2ec8";
-      fsType = "ext4";
+    { device = "/dev/disk/by-uuid/fd75d71c-23be-41a8-8ede-b0ee552e2be4";
+      fsType = "btrfs";
+      options = [ "subvol=nixos" "compress=zstd" ];
+    };
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/fd75d71c-23be-41a8-8ede-b0ee552e2be4";
+      fsType = "btrfs";
+      options = [ "subvol=home" "compress=zstd" ];
     };
 
   fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/1448-FFDD";
+    { device = "/dev/disk/by-uuid/EA4A-D611";
       fsType = "vfat";
     };
 
-  swapDevices = [ ];
+  swapDevices = [ { device = "/dev/disk/by-uuid/8ee80a94-8ca3-4293-9199-c7af7412cba9"; }];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
