@@ -11,8 +11,7 @@
   # Configure keymap in X11
   services.xserver = {
     enable = true;
-    # dpi = 196;
-    libinput.enable = true;
+    dpi = 196;
     displayManager = {
       sddm.enable = true;
       defaultSession = "none+i3";
@@ -23,6 +22,10 @@
     windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
+    };
+
+    libinput = {
+      enable = true;
     };
 
     layout = "us";

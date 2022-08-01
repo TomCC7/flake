@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./display.nix ./bluetooth.nix ./sound.nix ];
+  imports = [ ./xserver.nix ./bluetooth.nix ./sound.nix ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

@@ -12,8 +12,9 @@ let
 
 in {
   home.packages = with pkgs; [
-    # MISC
+    # display
     arandr
+    autorandr
 
     # TERMINAL
     neovim
@@ -30,6 +31,8 @@ in {
     pandoc
     exa
     htop
+    killall
+    ranger
 
     # fonts
     nerdfonts
@@ -51,9 +54,9 @@ in {
     pavucontrol
     discord
     vlc
+
     #spotify
     blueman
-
   ];
     # emacs
   programs.emacs = {
