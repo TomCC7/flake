@@ -30,24 +30,25 @@
     # softwares
     discord
     vlc
+    alacritty
 
-    (emacsWithPackages {
-      # Package is optional, defaults to pkgs.emacs
-      package = pkgs.emacsPgtk;
+    # (emacsWithPackages {
+    #   # Package is optional, defaults to pkgs.emacs
+    #   package = pkgs.emacsPgtk;
 
-      # Optionally provide extra packages not in the configuration file.
-      extraEmacsPackages = epkgs: [
-        epkgs.vterm
-        epkgs.magit
-      ];
+    #   # Optionally provide extra packages not in the configuration file.
+    #   extraEmacsPackages = epkgs: [
+    #     epkgs.vterm
+    #     epkgs.magit
+    #   ];
 
-      # Optionally override derivations.
-      # override = epkgs: epkgs // {
-      #   weechat = epkgs.melpaPackages.weechat.overrideAttrs(old: {
-      #     patches = [ ./weechat-el.patch ];
-      #   });
-      # };
-    })
+    #   # Optionally override derivations.
+    #   # override = epkgs: epkgs // {
+    #   #   weechat = epkgs.melpaPackages.weechat.overrideAttrs(old: {
+    #   #     patches = [ ./weechat-el.patch ];
+    #   #   });
+    #   # };
+    # })
   ];
 
 }

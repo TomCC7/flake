@@ -29,12 +29,10 @@
     i3lock-color
     pamixer
     picom
-    xclip
-    alacritty
     # (i3pystatus.override {
     #   extraLibs = with python3.pkgs; [keyrings-alt paho-mqtt];
     # })
-    networkmanagerapplet
+    # networkmanagerapplet
   ];
 
   # services.gvfs.enable = true;

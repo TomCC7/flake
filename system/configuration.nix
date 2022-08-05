@@ -5,6 +5,7 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
   # i3 env
   imports = [ ./i3.nix ];
   # Bootloader.
@@ -39,10 +40,6 @@
     description = "cc";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      # firefox
-      # thunderbird
-    ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are
