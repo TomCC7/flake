@@ -38,7 +38,7 @@
   users.users.cc = {
     isNormalUser = true;
     description = "cc";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
   };
 
@@ -68,15 +68,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.11"; # Did you read the comment?
-
-  services.xserver.videoDrivers = [ "intel" "nvidia" ];
-  
-  hardware.opengl.enable = true;
-
-  hardware.video.hidpi.enable = true;
-
-  # Optionally, you may need to select the appropriate driver version for your specific GPU.
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
 
   nix = {

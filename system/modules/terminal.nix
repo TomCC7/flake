@@ -2,6 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # monitoring
+    htop
+    nvtop
+    gotop
+    bottom
+    s-tui
     git
     curl
     stow
@@ -17,7 +23,6 @@
     feh
     pandoc
     exa
-    htop
     killall
     ranger
     tmux

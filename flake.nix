@@ -23,6 +23,7 @@
         inspiron = lib.nixosSystem {
           inherit system;
           modules = [
+            ./system/laptop.nix
             ./system/configuration.nix
             ./hardwares/inspiron.nix
             home-manager.nixosModules.home-manager {
