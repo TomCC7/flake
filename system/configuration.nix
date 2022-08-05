@@ -5,7 +5,8 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./xserver.nix ./bluetooth.nix ./sound.nix ];
+  # i3 env
+  imports = [ ./i3.nix ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -44,19 +45,6 @@
     ];
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-     vim
-     git
-     curl
-     stow
-     zsh
-  ];
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -92,6 +80,7 @@
 
   # Optionally, you may need to select the appropriate driver version for your specific GPU.
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+
 
   nix = {
     # TODO: check this

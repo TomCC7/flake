@@ -43,4 +43,5 @@
      }
   '';
   };
+  environment.systemPackages = [pkgs.pavucontrol];
 }

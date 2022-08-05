@@ -11,19 +11,7 @@
   # Configure keymap in X11
   services.xserver = {
     enable = true;
-    dpi = 196;
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "none+i3";
-    };
-    desktopManager = {
-      # xfce.enable = true;
-    };
-    windowManager.i3 = {
-      enable = true;
-      package = pkgs.i3-gaps;
-    };
-
+    dpi = 192;
     libinput = {
       enable = true;
     };
@@ -31,4 +19,9 @@
     layout = "us";
     xkbVariant = "";
   };
+
+  environment.systemPackages = with pkgs; [
+    arandr
+    autorandr
+  ];
 }

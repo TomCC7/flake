@@ -24,7 +24,7 @@
   };
 
   xresources.properties = {
-    # "xft.dpi" = 196;
+    "xft.dpi" = 192;
   };
 
   # services.polybar = {
