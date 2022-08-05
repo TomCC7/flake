@@ -2,11 +2,11 @@
 
 {
     # emacs
-  programs.emacs = {
-      enable = true;
-      extraPackages = epkgs: [
-        epkgs.vterm
-        epkgs.magit
-      ];
-  };
+  # programs.emacs = {
+  #     enable = true;
+  #     extraPackages = epkgs: [
+  #       epkgs.vterm
+  #       epkgs.magit
+  #     ];
+  # };
 }

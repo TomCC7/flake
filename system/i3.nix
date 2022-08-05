@@ -27,6 +27,7 @@
     rofi
     # libnotify
     i3lock-color
+    polybarFull
     pamixer
     picom
     # (i3pystatus.override {
