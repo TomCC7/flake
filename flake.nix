@@ -38,6 +38,25 @@
             {nixpkgs.overlays = [ nur.overlay ];}
           ];
         };
+
+        rog = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./system/laptop.nix
+            ./system/i3.nix
+            ./system/configuration.nix
+            ./hardwares/rog.nix
+            home-manager.nixosModules.home-manager {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.cc = {
+                imports = [ ./home/home.nix ];
+              };
+            }
+            # add nur into pkgs
+            {nixpkgs.overlays = [ nur.overlay ];}
+          ];
+        };
       };
     };
 }

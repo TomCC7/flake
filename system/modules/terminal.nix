@@ -26,5 +26,7 @@
     killall
     ranger
     tmux
+    wakatime
+    pciutils
   ];
 }

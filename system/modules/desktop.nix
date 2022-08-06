@@ -44,6 +44,8 @@
     discord
     vlc
     qutebrowser
+    chromium
+    firefox
     tdesktop
     slack
     mattermost-desktop

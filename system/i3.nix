@@ -8,7 +8,7 @@
 
   services.xserver = {
     displayManager = {
-      sddm.enable = true;
+      lightdm.enable = true;
       defaultSession = "none+i3";
     };
     windowManager.i3 = {
