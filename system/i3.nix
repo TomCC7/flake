@@ -21,15 +21,15 @@
   environment.systemPackages = with pkgs; [
     # autostart stuff
     dex
-    brightnessctl
+    playerctl
     # lxappearance
-    # scrot
     rofi
     # libnotify
     i3lock-color
     polybarFull
     pamixer
     picom
+    dunst
     # (i3pystatus.override {
     #   extraLibs = with python3.pkgs; [keyrings-alt paho-mqtt];
     # })

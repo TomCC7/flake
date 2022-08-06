@@ -24,6 +24,8 @@
   ];
 
   fonts.fonts = with pkgs; [
+    font-awesome
+    noto-fonts
     nerdfonts
     wqy_zenhei
     wqy_microhei
@@ -33,29 +35,18 @@
 
   environment.systemPackages = with pkgs; [
 
+    # desktop
+    alacritty
+    pcmanfm
+    flameshot
+
     # softwares
     discord
     vlc
-    alacritty
     qutebrowser
-
-    # (emacsWithPackages {
-    #   # Package is optional, defaults to pkgs.emacs
-    #   package = pkgs.emacsPgtk;
-
-    #   # Optionally provide extra packages not in the configuration file.
-    #   extraEmacsPackages = epkgs: [
-    #     epkgs.vterm
-    #     epkgs.magit
-    #   ];
-
-    #   # Optionally override derivations.
-    #   # override = epkgs: epkgs // {
-    #   #   weechat = epkgs.melpaPackages.weechat.overrideAttrs(old: {
-    #   #     patches = [ ./weechat-el.patch ];
-    #   #   });
-    #   # };
-    # })
+    tdesktop
+    slack
+    mattermost-desktop
+    # cider
   ];
-
 }

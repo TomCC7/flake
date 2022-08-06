@@ -7,7 +7,6 @@
 {
   nixpkgs.config.allowUnfree = true;
   # i3 env
-  imports = [ ./i3.nix ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

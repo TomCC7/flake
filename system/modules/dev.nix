@@ -6,6 +6,7 @@ let
     requests
     numpy
     ipython
+    # i3-quickterm
   ];
   my-python = python3.withPackages my-python-packages;
 in

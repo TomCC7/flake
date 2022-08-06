@@ -24,5 +24,6 @@
     arandr
     autorandr
     xclip
+    brightnessctl
   ];
 }
