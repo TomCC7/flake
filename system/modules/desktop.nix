@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [
-    ./sound.nix
-    ./bluetooth.nix
-  ];
   # emacs
   services.emacs = {
     enable = true;
@@ -51,5 +47,8 @@
     slack
     mattermost-desktop
     cider
+
+    # icon
+    papirus-icon-theme
   ];
 }

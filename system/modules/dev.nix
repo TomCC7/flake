@@ -6,6 +6,7 @@ let
     requests
     numpy
     ipython
+    poetry
     # i3-quickterm
   ];
   my-python = python3.withPackages my-python-packages;
@@ -23,6 +24,9 @@ in
     # python
     my-python
     julia-bin
+
+    # editors
+    vscode-with-extensions
   ];
 
   # Android {{

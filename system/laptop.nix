@@ -1,6 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [
+    ./modules/peripherals.nix
+  ];
   services.tlp = {
     enable = true;
     settings = {

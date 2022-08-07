@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
+  # bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   # Enable sound with pipewire.
   sound.enable = true;
   # disable pulseaudio
@@ -43,5 +47,5 @@
      }
   '';
   };
-  environment.systemPackages = [pkgs.pavucontrol];
+  environment.systemPackages = [pkgs.pavucontrol pkgs.helvum];
 }

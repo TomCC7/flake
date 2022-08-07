@@ -27,11 +27,9 @@
     # libnotify
     i3lock-color
     polybarFull
-    pamixer
     nitrogen
     picom
     dunst
-    mpd
     # (i3pystatus.override {
     #   extraLibs = with python3.pkgs; [keyrings-alt paho-mqtt];
     # })
