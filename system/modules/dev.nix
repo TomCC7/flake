@@ -24,4 +24,9 @@ in
     my-python
     julia-bin
   ];
+
+  # Android {{
+  programs.adb.enable = true;
+  users.users.cc.extraGroups = ["adbusers"];
+  # }}
 }

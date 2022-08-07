@@ -25,5 +25,6 @@
     autorandr
     xclip
     brightnessctl
+    xorg.xwininfo
   ];
 }

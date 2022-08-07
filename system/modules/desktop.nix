@@ -39,6 +39,7 @@
     alacritty
     pcmanfm
     flameshot
+    font-manager
 
     # softwares
     discord
@@ -49,6 +50,6 @@
     tdesktop
     slack
     mattermost-desktop
-    # cider
+    cider
   ];
 }

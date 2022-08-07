@@ -24,14 +24,15 @@
   };
 
   xresources.properties = {
-    "xft.dpi" = 192;
+    "xft.dpi" = 144;
   };
 
-  # services.polybar = {
-  #   enable = true;
-  #   package = pkgs.polybarFull;
-  #   script = ''
-  #     polybar top &
-  #   '';
-  # };
+  xresources.extraConfig = builtins.readFile (
+    pkgs.fetchFromGitHub {
+      owner = "dracula";
+      repo = "xresources";
+      rev = "539ef24e9b0c5498a82d59bfa2bad9b618d832a3";
+      sha256 = "sha256-6fltsAluqOqYIh2NX0I/LC3WCWkb9Fn8PH6LNLBQbrY=";
+    } + "/Xresources"
+  );
 }

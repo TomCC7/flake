@@ -5,7 +5,6 @@
     # monitoring
     htop
     nvtop
-    gotop
     bottom
     s-tui
     git

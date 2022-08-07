@@ -8,7 +8,7 @@
 
   services.xserver = {
     displayManager = {
-      lightdm.enable = true;
+      sddm.enable = true;
       defaultSession = "none+i3";
     };
     windowManager.i3 = {
@@ -28,8 +28,10 @@
     i3lock-color
     polybarFull
     pamixer
+    nitrogen
     picom
     dunst
+    mpd
     # (i3pystatus.override {
     #   extraLibs = with python3.pkgs; [keyrings-alt paho-mqtt];
     # })
