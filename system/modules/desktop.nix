@@ -33,7 +33,7 @@
 
     # desktop
     alacritty
-    pcmanfm
+    xfce.thunar
     flameshot
     font-manager
 

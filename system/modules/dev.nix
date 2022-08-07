@@ -14,6 +14,7 @@ in
 {
   virtualisation.docker = {
     enable = true;
+    enableNvidia = true;
   };
   environment.systemPackages = with pkgs; [
     # c & c++

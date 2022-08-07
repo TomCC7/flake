@@ -35,4 +35,12 @@
       sha256 = "sha256-6fltsAluqOqYIh2NX0I/LC3WCWkb9Fn8PH6LNLBQbrY=";
     } + "/Xresources"
   );
+
+  gtk = {
+    enable = false;
+    theme = {
+      name = "Materia-dark";
+      package = pkgs.materia-theme;
+    };
+  };
 }

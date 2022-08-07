@@ -14,6 +14,9 @@
     windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
+      extraPackages = with pkgs; [
+        i3lock-color
+      ];
     };
 
   };
@@ -22,10 +25,10 @@
     # autostart stuff
     dex
     playerctl
-    # lxappearance
+    lxappearance
     rofi
     # libnotify
-    i3lock-color
+    pamixer
     polybarFull
     nitrogen
     picom
