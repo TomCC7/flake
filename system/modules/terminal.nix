@@ -20,12 +20,16 @@
     aria2
     imagemagick
     feh
-    pandoc
     exa
     killall
     ranger
     tmux
     wakatime
     pciutils
+    jq
+    usbutils
+    cloc
   ];
+
+  programs.autojump.enable = true;
 }

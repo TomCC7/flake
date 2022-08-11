@@ -12,10 +12,6 @@
   services.xserver = {
     enable = true;
     dpi = 192;
-    libinput = {
-      enable = true;
-    };
-
     layout = "us";
     xkbVariant = "";
   };

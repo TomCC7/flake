@@ -1,23 +1,19 @@
 { config, lib, pkgs, ... }:
 
 {
-  # emacs
-  services.emacs = {
-    enable = true;
-    package = with pkgs; ((emacsPackagesFor emacs).emacsWithPackages (epkgs: [
-      epkgs.vterm
-      epkgs.magit
-    ]));
-    # defaultEditor = true;
+  # input methods
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5 = {
+      addons = with pkgs; [
+        fcitx5-rime
+        fcitx5-configtool
+        fcitx5-gtk
+        fcitx5-chinese-addons
+      ];
+      enableRimeData = true;
+    };
   };
-
-  nixpkgs.overlays = [
-    (import (builtins.fetchGit {
-      url = "https://github.com/nix-community/emacs-overlay.git";
-      ref = "master";
-      rev = "4a5b9fb659456b31d2c15e53694e139077920592";
-    }))
-  ];
 
   fonts.fonts = with pkgs; [
     font-awesome
@@ -30,7 +26,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-
     # desktop
     alacritty
     xfce.thunar
@@ -38,17 +33,29 @@
     font-manager
 
     # softwares
-    discord
-    vlc
+    # browser
     qutebrowser
     chromium
     firefox
+    # IM
     tdesktop
+    discord
     slack
     mattermost-desktop
+    # viewers
+    zathura
+    nomacs
     cider
+    vlc
 
     # icon
     papirus-icon-theme
+
+    # emacs
+    pandoc
+    ripgrep
+    fd
+    editorconfig-checker
+    nixfmt
   ];
 }

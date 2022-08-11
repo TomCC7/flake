@@ -35,7 +35,7 @@
               };
             }
             # add nur into pkgs
-            {nixpkgs.overlays = [ nur.overlay ];}
+            nur.nixosModules.nur
           ];
         };
 

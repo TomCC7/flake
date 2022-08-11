@@ -33,6 +33,7 @@
     nitrogen
     picom
     dunst
+    xidlehook
     # (i3pystatus.override {
     #   extraLibs = with python3.pkgs; [keyrings-alt paho-mqtt];
     # })
