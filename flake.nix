@@ -8,9 +8,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = "github:nix-community/NUR";
+    nix-matlab = {
+      # Recommended if you also override the default nixpkgs flake, common among
+      # nixos-unstable users:
+      # inputs.nixpkgs.follows = "nixpkgs";
+      url = "gitlab:doronbehar/nix-matlab";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nur }:
+  outputs = { self, nixpkgs, home-manager, nur, nix-matlab }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -18,6 +24,9 @@
         config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
+      flake-overlays = [
+        nix-matlab.overlay
+      ];
     in {
       nixosConfigurations = {
         inspiron = lib.nixosSystem {
@@ -35,7 +44,7 @@
               };
             }
             # add nur into pkgs
-            nur.nixosModules.nur
+            {nixpkgs.overlays = [ nur.overlay ];}
           ];
         };
 
@@ -55,6 +64,8 @@
             }
             # add nur into pkgs
             {nixpkgs.overlays = [ nur.overlay ];}
+            # matlab
+            (import ./overlays/matlab.nix flake-overlays)
           ];
         };
       };

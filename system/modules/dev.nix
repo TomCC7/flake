@@ -25,6 +25,10 @@ in
     package = with pkgs; ((emacsPackagesFor emacs).emacsWithPackages (epkgs: [
       epkgs.vterm
       epkgs.magit
+      epkgs.pdf-tools
+      epkgs.org-roam
+      epkgs.emacsql-sqlite3
+      epkgs.emacsql
     ]));
     # defaultEditor = true;
   };
@@ -67,4 +71,5 @@ in
   programs.adb.enable = true;
   users.users.cc.extraGroups = ["adbusers"];
   # }}
+
 }

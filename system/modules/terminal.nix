@@ -8,6 +8,7 @@
     bottom
     s-tui
     git
+    git-lfs
     curl
     stow
     zsh
