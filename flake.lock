@@ -24,11 +24,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1661201353,
-        "narHash": "sha256-hee34c72DNz1Otj86b2NEc4s1JQ+qnIb1XyWuUD4v6o=",
+        "lastModified": 1661284925,
+        "narHash": "sha256-DKxOkYrhbdBt2t+C3rpJrEBsM6A63jP92TM+XnUKyho=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "0160a0cef076294127f8cc0750019410ab94370d",
+        "rev": "353d21e108790a4823c9fae9812dc953e8994399",
         "type": "github"
       },
       "original": {
@@ -40,7 +40,9 @@
     "nix-matlab": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1661266965,
@@ -58,41 +60,27 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1661239106,
-        "narHash": "sha256-C5OCLnrv2c4CHs9DMEtYKkjJmGL7ySAZ1PqPkHBonxQ=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "963d27a0767422be9b8686a8493dcade6acee992",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1661239211,
-        "narHash": "sha256-pNJzBlSNpWEiFJZnLF2oETYq8cGWx1DJPW33aMtG6n8=",
+        "lastModified": 1661296439,
+        "narHash": "sha256-quDgSKmtrphMDmDECDw+Ceguqihkf5U3P9K9DBnr9P0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5e804cd8a27f835a402b22e086e36e797716ef8b",
+        "rev": "2f63a28b7cf8ecb7205fadc8bbae22e20d0aefe9",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-unstable",
+        "ref": "master",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "nur": {
       "locked": {
-        "lastModified": 1661258939,
-        "narHash": "sha256-zAgghYJHbFvd0kQp0WggchOVcOtjMFZGuRTE67GzJss=",
+        "lastModified": 1661281861,
+        "narHash": "sha256-nEMwhUL8XIh8tzgvIZqJgFa+TcJ5Up0e3Kv721vh/DA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "4dbaa0e39810bfde67171432bdb7d9bcedb0dd1b",
+        "rev": "ad1adc14fa01a3cd268c14642c88650c067ac418",
         "type": "github"
       },
       "original": {
@@ -105,7 +93,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nix-matlab": "nix-matlab",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "nur": "nur"
       }
     },
